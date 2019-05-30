@@ -45,9 +45,9 @@ public class Amazonscript {
 		String productName = driver.findElement(By.xpath("//span[@id='productTitle']")).getText();
 		System.out.println(productName);
 		driver.findElement(By.xpath("//*[@title='Add to Shopping Cart']")).click();
-		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("mcmdivya@gmail.com");
+		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("xyz@gmail.com");
 		driver.findElement(By.xpath("//input[@type='submit']")).click();
-		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("dbbmrctaa");
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("dbbcta");
 		driver.findElement(By.xpath("//input[@type='submit']")).click();
 		driver.findElement(By.xpath("//span[text()='Cart']")).click();
 		String cartName = driver.findElement(By.xpath(
