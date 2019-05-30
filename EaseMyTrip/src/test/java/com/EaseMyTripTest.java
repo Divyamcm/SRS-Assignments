@@ -1,6 +1,6 @@
 package com;
 
-import org.testng.annotations.Test;
+import  org.testng.annotations.Test;
 
 import org.testng.annotations.BeforeClass;
 
@@ -39,12 +39,13 @@ public class EaseMyTripTest {
 		String date = (dtf.format(now));
 		System.out.println(date);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//div[@class='box']//li[contains(text(),'30')]")).click();
+		driver.findElement(By.xpath("//div[@class='box']//li[contains(text(),'"+date+"')]")).click();
 		driver.manage().timeouts().implicitlyWait(31, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//a[@onclick='myFunction4()']/span[@class='drpNoTrv']")).click();
 		driver.findElement(By.xpath("//div[@id='myDropdown_n']//input[@class='plus_box1']")).click();
 		driver.findElement(By.xpath("//div[@id='myDropdown_n']//input[@class='plus_boxChd']")).click();
 		driver.findElement(By.xpath("//a[@id='traveLer']")).click();
+		driver.manage().timeouts().implicitlyWait(31, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//a[@onclick='myFunction9()']")).click();
 		driver.findElement(By.xpath("//div[@id='myDropdown_n9']//label/input[@value='2']")).click();
 		driver.findElement(By.xpath("//a[@id='tripType']")).click();
